@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon",
-    "start": "node -r ./bootstrap.js build/server.js",
-    "build": "tsc --build tsconfig.build.json",
+    "start": "node -r ./bootstrap.js build/src/server.js",
+    "build": "node swagger/swaggergen.js && tsc --build tsconfig.build.json",
+    "build:pure": "tsc --build tsconfig.build.json",
+    "swagger:generate-doc-file": "node swagger/swaggergen.js",
     "test": "mocha -r tsconfig-paths/register -r ts-node/register  \"./src/test/**/*.ts\""
   },
   "keywords": [],

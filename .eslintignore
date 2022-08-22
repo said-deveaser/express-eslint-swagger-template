@@ -2,3 +2,5 @@ node_modules
 build
 
 bootstrap.js
+swaggergen.js
+*.js
